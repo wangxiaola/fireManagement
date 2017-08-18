@@ -1,0 +1,6 @@
+framework module Pods_fireManagement {
+  umbrella header "Pods-fireManagement-umbrella.h"
+
+  export *
+  module * { export * }
+}
