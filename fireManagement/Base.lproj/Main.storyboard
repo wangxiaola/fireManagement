@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="150" y="62"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Message View Controller-->
         <scene sceneID="Y5N-vI-tn3">
             <objects>
-                <viewController id="Nlh-Dg-AnC" sceneMemberID="viewController">
+                <viewController id="Nlh-Dg-AnC" customClass="TBHomeMessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kh9-Ip-517"/>
                         <viewControllerLayoutGuide type="bottom" id="EVr-Zy-Cs9"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="150" y="858"/>
         </scene>
-        <!--View Controller-->
+        <!--Home My View Controller-->
         <scene sceneID="hSF-3l-8qG">
             <objects>
-                <viewController id="cp5-JJ-m3n" sceneMemberID="viewController">
+                <viewController id="cp5-JJ-m3n" customClass="TBHomeMyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="539-ZG-rwm"/>
                         <viewControllerLayoutGuide type="bottom" id="TV9-FX-70K"/>
@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="150" y="-731"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Task View Controller-->
         <scene sceneID="gXz-g9-wIS">
             <objects>
-                <viewController id="ZPq-G6-Zx6" sceneMemberID="viewController">
+                <viewController id="ZPq-G6-Zx6" customClass="TBHomeTaskViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IZY-WN-OVj"/>
                         <viewControllerLayoutGuide type="bottom" id="Ccw-3V-wfh"/>

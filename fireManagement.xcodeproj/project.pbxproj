@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		3ACB3C29402D3A15A7772F3B /* Pods_fireManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DC28F2563F651423924510 /* Pods_fireManagement.framework */; };
+		3BA23F241F4AB57700BF4EF3 /* TBHomeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F231F4AB57700BF4EF3 /* TBHomeMessageViewController.m */; };
+		3BA23F271F4AB59300BF4EF3 /* TBHomeTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F261F4AB59300BF4EF3 /* TBHomeTaskViewController.m */; };
+		3BA23F2A1F4AB5B100BF4EF3 /* TBHomeMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F291F4AB5B100BF4EF3 /* TBHomeMyViewController.m */; };
+		3BA23F331F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F311F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.m */; };
+		3BA23F341F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA23F321F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.xib */; };
+		3BA23F391F4ACD1000BF4EF3 /* TBHeaderJellyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F361F4ACD1000BF4EF3 /* TBHeaderJellyView.m */; };
+		3BA23F3A1F4ACD1000BF4EF3 /* TBMyBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F381F4ACD1000BF4EF3 /* TBMyBannerView.m */; };
+		3BA23F3D1F4ACD3400BF4EF3 /* TBChoosePhotosTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F3C1F4ACD3400BF4EF3 /* TBChoosePhotosTool.m */; };
+		3BA23F401F4AD37C00BF4EF3 /* TBBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F3F1F4AD37C00BF4EF3 /* TBBaseListViewController.m */; };
+		3BA23F431F4AD3E200BF4EF3 /* ZKBaseClassViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F421F4AD3E200BF4EF3 /* ZKBaseClassViewMode.m */; };
+		3BA23F461F4AD64B00BF4EF3 /* TBHomeMessageMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F451F4AD64B00BF4EF3 /* TBHomeMessageMode.m */; };
+		3BA23F4A1F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA23F481F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.m */; };
+		3BA23F4B1F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA23F491F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.xib */; };
 		3BC8F6421F46C06A00EF709C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F6411F46C06A00EF709C /* main.m */; };
 		3BC8F6451F46C06A00EF709C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F6441F46C06A00EF709C /* AppDelegate.m */; };
 		3BC8F64B1F46C06A00EF709C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC8F6491F46C06A00EF709C /* Main.storyboard */; };
@@ -388,6 +401,30 @@
 
 /* Begin PBXFileReference section */
 		07DC28F2563F651423924510 /* Pods_fireManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fireManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA23F221F4AB57700BF4EF3 /* TBHomeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeMessageViewController.h; sourceTree = "<group>"; };
+		3BA23F231F4AB57700BF4EF3 /* TBHomeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeMessageViewController.m; sourceTree = "<group>"; };
+		3BA23F251F4AB59300BF4EF3 /* TBHomeTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeTaskViewController.h; sourceTree = "<group>"; };
+		3BA23F261F4AB59300BF4EF3 /* TBHomeTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeTaskViewController.m; sourceTree = "<group>"; };
+		3BA23F281F4AB5B100BF4EF3 /* TBHomeMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeMyViewController.h; sourceTree = "<group>"; };
+		3BA23F291F4AB5B100BF4EF3 /* TBHomeMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeMyViewController.m; sourceTree = "<group>"; };
+		3BA23F301F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeTaskCollectionViewCell.h; sourceTree = "<group>"; };
+		3BA23F311F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeTaskCollectionViewCell.m; sourceTree = "<group>"; };
+		3BA23F321F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBHomeTaskCollectionViewCell.xib; sourceTree = "<group>"; };
+		3BA23F351F4ACD1000BF4EF3 /* TBHeaderJellyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHeaderJellyView.h; sourceTree = "<group>"; };
+		3BA23F361F4ACD1000BF4EF3 /* TBHeaderJellyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHeaderJellyView.m; sourceTree = "<group>"; };
+		3BA23F371F4ACD1000BF4EF3 /* TBMyBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMyBannerView.h; sourceTree = "<group>"; };
+		3BA23F381F4ACD1000BF4EF3 /* TBMyBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMyBannerView.m; sourceTree = "<group>"; };
+		3BA23F3B1F4ACD3400BF4EF3 /* TBChoosePhotosTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBChoosePhotosTool.h; sourceTree = "<group>"; };
+		3BA23F3C1F4ACD3400BF4EF3 /* TBChoosePhotosTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChoosePhotosTool.m; sourceTree = "<group>"; };
+		3BA23F3E1F4AD37C00BF4EF3 /* TBBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBaseListViewController.h; sourceTree = "<group>"; };
+		3BA23F3F1F4AD37C00BF4EF3 /* TBBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBaseListViewController.m; sourceTree = "<group>"; };
+		3BA23F411F4AD3E200BF4EF3 /* ZKBaseClassViewMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKBaseClassViewMode.h; sourceTree = "<group>"; };
+		3BA23F421F4AD3E200BF4EF3 /* ZKBaseClassViewMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKBaseClassViewMode.m; sourceTree = "<group>"; };
+		3BA23F441F4AD64B00BF4EF3 /* TBHomeMessageMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeMessageMode.h; sourceTree = "<group>"; };
+		3BA23F451F4AD64B00BF4EF3 /* TBHomeMessageMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeMessageMode.m; sourceTree = "<group>"; };
+		3BA23F471F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeMessageTableViewCell.h; sourceTree = "<group>"; };
+		3BA23F481F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHomeMessageTableViewCell.m; sourceTree = "<group>"; };
+		3BA23F491F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBHomeMessageTableViewCell.xib; sourceTree = "<group>"; };
 		3BC8F63D1F46C06A00EF709C /* fireManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC8F6411F46C06A00EF709C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BC8F6431F46C06A00EF709C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1161,6 +1198,189 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3BA23F0A1F4AB4B900BF4EF3 /* 任务 */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F0C1F4AB4B900BF4EF3 /* ViewController */,
+				3BA23F0D1F4AB4B900BF4EF3 /* viewMode */,
+				3BA23F0B1F4AB4B900BF4EF3 /* mode */,
+				3BA23F0E1F4AB4B900BF4EF3 /* views */,
+			);
+			path = "任务";
+			sourceTree = "<group>";
+		};
+		3BA23F0B1F4AB4B900BF4EF3 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		3BA23F0C1F4AB4B900BF4EF3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F251F4AB59300BF4EF3 /* TBHomeTaskViewController.h */,
+				3BA23F261F4AB59300BF4EF3 /* TBHomeTaskViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BA23F0D1F4AB4B900BF4EF3 /* viewMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewMode;
+			sourceTree = "<group>";
+		};
+		3BA23F0E1F4AB4B900BF4EF3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F0F1F4AB4B900BF4EF3 /* cell */,
+				3BA23F101F4AB4B900BF4EF3 /* view */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3BA23F0F1F4AB4B900BF4EF3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F301F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.h */,
+				3BA23F311F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.m */,
+				3BA23F321F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3BA23F101F4AB4B900BF4EF3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3BA23F111F4AB4C400BF4EF3 /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F131F4AB4C400BF4EF3 /* ViewController */,
+				3BA23F141F4AB4C400BF4EF3 /* viewMode */,
+				3BA23F121F4AB4C400BF4EF3 /* mode */,
+				3BA23F151F4AB4C400BF4EF3 /* views */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		3BA23F121F4AB4C400BF4EF3 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F441F4AD64B00BF4EF3 /* TBHomeMessageMode.h */,
+				3BA23F451F4AD64B00BF4EF3 /* TBHomeMessageMode.m */,
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		3BA23F131F4AB4C400BF4EF3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F221F4AB57700BF4EF3 /* TBHomeMessageViewController.h */,
+				3BA23F231F4AB57700BF4EF3 /* TBHomeMessageViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BA23F141F4AB4C400BF4EF3 /* viewMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewMode;
+			sourceTree = "<group>";
+		};
+		3BA23F151F4AB4C400BF4EF3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F161F4AB4C400BF4EF3 /* cell */,
+				3BA23F171F4AB4C400BF4EF3 /* view */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3BA23F161F4AB4C400BF4EF3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F471F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.h */,
+				3BA23F481F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.m */,
+				3BA23F491F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3BA23F171F4AB4C400BF4EF3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3BA23F181F4AB4CD00BF4EF3 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F1A1F4AB4CD00BF4EF3 /* ViewController */,
+				3BA23F1B1F4AB4CD00BF4EF3 /* viewMode */,
+				3BA23F191F4AB4CD00BF4EF3 /* mode */,
+				3BA23F1C1F4AB4CD00BF4EF3 /* views */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		3BA23F191F4AB4CD00BF4EF3 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		3BA23F1A1F4AB4CD00BF4EF3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F281F4AB5B100BF4EF3 /* TBHomeMyViewController.h */,
+				3BA23F291F4AB5B100BF4EF3 /* TBHomeMyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BA23F1B1F4AB4CD00BF4EF3 /* viewMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewMode;
+			sourceTree = "<group>";
+		};
+		3BA23F1C1F4AB4CD00BF4EF3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F1D1F4AB4CD00BF4EF3 /* cell */,
+				3BA23F1E1F4AB4CD00BF4EF3 /* view */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3BA23F1D1F4AB4CD00BF4EF3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3BA23F1E1F4AB4CD00BF4EF3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3BA23F351F4ACD1000BF4EF3 /* TBHeaderJellyView.h */,
+				3BA23F361F4ACD1000BF4EF3 /* TBHeaderJellyView.m */,
+				3BA23F371F4ACD1000BF4EF3 /* TBMyBannerView.h */,
+				3BA23F381F4ACD1000BF4EF3 /* TBMyBannerView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		3BC8F6341F46C06A00EF709C = {
 			isa = PBXGroup;
 			children = (
@@ -1238,10 +1458,14 @@
 		3BC8F6631F46D27400EF709C /* base */ = {
 			isa = PBXGroup;
 			children = (
+				3BA23F411F4AD3E200BF4EF3 /* ZKBaseClassViewMode.h */,
+				3BA23F421F4AD3E200BF4EF3 /* ZKBaseClassViewMode.m */,
 				3BC8F6641F46D27400EF709C /* TBBaseTableViewController.h */,
 				3BC8F6651F46D27400EF709C /* TBBaseTableViewController.m */,
 				3BC8F6661F46D27400EF709C /* TBBaseViewController.h */,
 				3BC8F6671F46D27400EF709C /* TBBaseViewController.m */,
+				3BA23F3E1F4AD37C00BF4EF3 /* TBBaseListViewController.h */,
+				3BA23F3F1F4AD37C00BF4EF3 /* TBBaseListViewController.m */,
 				3BC8F6681F46D27400EF709C /* ZKNavigationController.h */,
 				3BC8F6691F46D27400EF709C /* ZKNavigationController.m */,
 				3BC8F66A1F46D27400EF709C /* ZKTextField.h */,
@@ -1522,6 +1746,8 @@
 		3BC8F72C1F46D27400EF709C /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				3BA23F3B1F4ACD3400BF4EF3 /* TBChoosePhotosTool.h */,
+				3BA23F3C1F4ACD3400BF4EF3 /* TBChoosePhotosTool.m */,
 				3BC8F72D1F46D27400EF709C /* HUD.h */,
 				3BC8F72E1F46D27400EF709C /* HUD.m */,
 				3BC8F72F1F46D27400EF709C /* ZKPostHttp.h */,
@@ -1773,6 +1999,9 @@
 			isa = PBXGroup;
 			children = (
 				3BC8FB2B1F46D47300EF709C /* 登录 */,
+				3BA23F0A1F4AB4B900BF4EF3 /* 任务 */,
+				3BA23F111F4AB4C400BF4EF3 /* 消息 */,
+				3BA23F181F4AB4CD00BF4EF3 /* 我的 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2669,9 +2898,11 @@
 				3BC8FB031F46D27500EF709C /* back_button_normal.png in Resources */,
 				3BC8FB061F46D27500EF709C /* change_camera_pic.png in Resources */,
 				3BC8FB0D1F46D27500EF709C /* select_yes.png in Resources */,
+				3BA23F341F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.xib in Resources */,
 				3BC8F64D1F46C06A00EF709C /* Assets.xcassets in Resources */,
 				3BC8FB0F1F46D27500EF709C /* take_photo_pic@2x.png in Resources */,
 				3BC8FB551F46D47300EF709C /* TBRegisteredViewController.xib in Resources */,
+				3BA23F4B1F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.xib in Resources */,
 				3BC8FB0B1F46D27500EF709C /* remove_btn_pic.png in Resources */,
 				3BC8FB531F46D47300EF709C /* TBLogInViewController.xib in Resources */,
 				3BC8F64B1F46C06A00EF709C /* Main.storyboard in Resources */,
@@ -2747,6 +2978,7 @@
 				3BC8FD8B1F46D72800EF709C /* ZXByteArray.m in Sources */,
 				3BC8FD751F46D72800EF709C /* ZXURIResultParser.m in Sources */,
 				3BC8F9BB1F46D27500EF709C /* UIButton+ImageTitleStyle.m in Sources */,
+				3BA23F431F4AD3E200BF4EF3 /* ZKBaseClassViewMode.m in Sources */,
 				3BC8F9D51F46D27500EF709C /* IQTitleBarButtonItem.m in Sources */,
 				3BC8FB1E1F46D27500EF709C /* ZZPhotoListModel.m in Sources */,
 				3BC8FD801F46D72800EF709C /* ZXMathUtils.m in Sources */,
@@ -2838,6 +3070,7 @@
 				3BC8FDC21F46D72800EF709C /* ZXAI013x0x1xDecoder.m in Sources */,
 				3BC8FD8E1F46D72800EF709C /* ZXDefaultGridSampler.m in Sources */,
 				3BC8FD5E1F46D72800EF709C /* ZXBookmarkDoCoMoResultParser.m in Sources */,
+				3BA23F391F4ACD1000BF4EF3 /* TBHeaderJellyView.m in Sources */,
 				3BC8FB131F46D27500EF709C /* ZZCameraFocusView.m in Sources */,
 				3BC8FDE21F46D72800EF709C /* ZXEAN13Writer.m in Sources */,
 				3BC8FD951F46D72800EF709C /* ZXStringUtils.m in Sources */,
@@ -2853,6 +3086,8 @@
 				3BC8FA0A1F46D27500EF709C /* TYBasePageTabBar.m in Sources */,
 				3BC8F9C11F46D27500EF709C /* UIView+Frame.m in Sources */,
 				3BC8FDBB1F46D72800EF709C /* ZXByQuadrantReader.m in Sources */,
+				3BA23F241F4AB57700BF4EF3 /* TBHomeMessageViewController.m in Sources */,
+				3BA23F3A1F4ACD1000BF4EF3 /* TBMyBannerView.m in Sources */,
 				3BC8FD551F46D72800EF709C /* ZXAztecToken.m in Sources */,
 				3BC8FDA41F46D72800EF709C /* ZXDataMatrixDataBlock.m in Sources */,
 				3BC8FD5C1F46D72800EF709C /* ZXAddressBookParsedResult.m in Sources */,
@@ -2930,6 +3165,7 @@
 				3BC8FAFC1F46D27500EF709C /* TBMoreReminderView.m in Sources */,
 				3BC8FDA61F46D72800EF709C /* ZXDataMatrixDecoder.m in Sources */,
 				3BC8FB021F46D27500EF709C /* ZZAlumAnimation.m in Sources */,
+				3BA23F461F4AD64B00BF4EF3 /* TBHomeMessageMode.m in Sources */,
 				3BC8FB241F46D27500EF709C /* ZZPhotoPickerFooterView.m in Sources */,
 				3BC8FE041F46D72800EF709C /* ZXPDF417BarcodeMatrix.m in Sources */,
 				3BC8F9F71F46D27500EF709C /* MJPhotoToolbar.m in Sources */,
@@ -2965,6 +3201,7 @@
 				3BC8FE0B1F46D72800EF709C /* ZXPDF417ResultMetadata.m in Sources */,
 				3BC8F9BC1F46D27500EF709C /* UIImage+CircleImage.m in Sources */,
 				3BC8FB201F46D27500EF709C /* ZZPhotoBrowerCell.m in Sources */,
+				3BA23F401F4AD37C00BF4EF3 /* TBBaseListViewController.m in Sources */,
 				3BC8FDEA1F46D72800EF709C /* ZXOneDimensionalCodeWriter.m in Sources */,
 				3BC8FDE91F46D72800EF709C /* ZXMultiFormatUPCEANReader.m in Sources */,
 				3BC8FD821F46D72800EF709C /* ZXWhiteRectangleDetector.m in Sources */,
@@ -2972,10 +3209,13 @@
 				3BC8F9DC1F46D27500EF709C /* LBXScanResult.m in Sources */,
 				3BC8F9F51F46D27500EF709C /* MJPhotoLoadingView.m in Sources */,
 				3BC8FD681F46D72800EF709C /* ZXISBNResultParser.m in Sources */,
+				3BA23F271F4AB59300BF4EF3 /* TBHomeTaskViewController.m in Sources */,
 				3BC8F9CC1F46D27500EF709C /* IQUIView+Hierarchy.m in Sources */,
+				3BA23F331F4AB88300BF4EF3 /* TBHomeTaskCollectionViewCell.m in Sources */,
 				3BC8FDF41F46D72800EF709C /* ZXModulusGF.m in Sources */,
 				3BC8FD6F1F46D72800EF709C /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				3BC8FE181F46D72800EF709C /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
+				3BA23F2A1F4AB5B100BF4EF3 /* TBHomeMyViewController.m in Sources */,
 				3BC8FE001F46D72800EF709C /* ZXPDF417ScanningDecoder.m in Sources */,
 				3BC8FDBE1F46D72800EF709C /* ZXAI013103decoder.m in Sources */,
 				3BC8FE0D1F46D72800EF709C /* ZXQRCodeBitMatrixParser.m in Sources */,
@@ -2983,6 +3223,7 @@
 				3BC8FD721F46D72800EF709C /* ZXTelResultParser.m in Sources */,
 				3BC8FDF91F46D72800EF709C /* ZXPDF417BoundingBox.m in Sources */,
 				3BC8FDD11F46D72800EF709C /* ZXRSSExpandedPair.m in Sources */,
+				3BA23F3D1F4ACD3400BF4EF3 /* TBChoosePhotosTool.m in Sources */,
 				3BC8FE051F46D72800EF709C /* ZXPDF417BarcodeRow.m in Sources */,
 				3BC8F9F61F46D27500EF709C /* MJPhotoProgressView.m in Sources */,
 				3BC8FD761F46D72800EF709C /* ZXURLTOResultParser.m in Sources */,
@@ -3068,6 +3309,7 @@
 				3BC8FDC61F46D72800EF709C /* ZXAI01weightDecoder.m in Sources */,
 				3BC8FD671F46D72800EF709C /* ZXISBNParsedResult.m in Sources */,
 				3BC8FD911F46D72800EF709C /* ZXGridSampler.m in Sources */,
+				3BA23F4A1F4AD66100BF4EF3 /* TBHomeMessageTableViewCell.m in Sources */,
 				3BC8FDB31F46D72800EF709C /* ZXDataMatrixTextEncoder.m in Sources */,
 				3BC8FE061F46D72800EF709C /* ZXPDF417Dimensions.m in Sources */,
 				3BC8FB1A1F46D27500EF709C /* ZZPhotoListViewController.m in Sources */,

@@ -37,31 +37,35 @@
     // 判断是否是第一次登陆
     
     hudConfig();
-    /*
-     获取APP版本号，将版本号作为Key（比如Bool类型），存储在NSuserDefault中，初此安装打开时，key是不存在的，即进入引导页面，之后将此key保存起来（保证前面的判断不会再进入）app升级后，判断新版本号的key，发现没有，即显示新版本的引导页面，然后将Key保存起来，以此类推。
-     */
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     
-    NSString *xcodeAppVersion = [NSString stringWithFormat:@"%@%@",[infoDictionary valueForKey:@"CFBundleShortVersionString"],[infoDictionary valueForKey:@"CFBundleVersion"]];
-    // 判断是否第一次进入或者是否刚升级完成
-    BOOL isVersion = [ZKUtil obtainBoolForKey:xcodeAppVersion];
+    UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
     
-    if ([ZKUtil obtainBoolForKey:VALIDATION] && isVersion == YES)
-    {
-        UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
-    }
-    else
-    {
-        [self uiSetting];
-        [ZKUtil saveBoolForKey:xcodeAppVersion valueBool:YES];
-    }
-    // 启动页加载
-    if ([ZKUtil obtainBoolForKey:START_PAGE] == NO)
-    {
-        TBStartPageView *pageView = [[TBStartPageView alloc] init];
-        [pageView show];
-    }
+//    /*
+//     获取APP版本号，将版本号作为Key（比如Bool类型），存储在NSuserDefault中，初此安装打开时，key是不存在的，即进入引导页面，之后将此key保存起来（保证前面的判断不会再进入）app升级后，判断新版本号的key，发现没有，即显示新版本的引导页面，然后将Key保存起来，以此类推。
+//     */
+//    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+//    
+//    NSString *xcodeAppVersion = [NSString stringWithFormat:@"%@%@",[infoDictionary valueForKey:@"CFBundleShortVersionString"],[infoDictionary valueForKey:@"CFBundleVersion"]];
+//    // 判断是否第一次进入或者是否刚升级完成
+//    BOOL isVersion = [ZKUtil obtainBoolForKey:xcodeAppVersion];
+//    
+//    if ([ZKUtil obtainBoolForKey:VALIDATION] && isVersion == YES)
+//    {
+//        UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
+//    }
+//    else
+//    {
+//        [self uiSetting];
+//        [ZKUtil saveBoolForKey:xcodeAppVersion valueBool:YES];
+//    }
+//    // 启动页加载
+//    if ([ZKUtil obtainBoolForKey:START_PAGE] == NO)
+//    {
+//        TBStartPageView *pageView = [[TBStartPageView alloc] init];
+//        [pageView show];
+//    }
 }
 /**
  控件设置
