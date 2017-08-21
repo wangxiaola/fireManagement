@@ -153,7 +153,6 @@
 		3BC8FB4D1F46D47300EF709C /* TBUpdateTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB321F46D47300EF709C /* TBUpdateTooltipView.m */; };
 		3BC8FB4E1F46D47300EF709C /* TBStartPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB351F46D47300EF709C /* TBStartPageView.m */; };
 		3BC8FB4F1F46D47300EF709C /* TBTimeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB371F46D47300EF709C /* TBTimeButton.m */; };
-		3BC8FB501F46D47300EF709C /* TBStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB3A1F46D47300EF709C /* TBStrategyViewController.m */; };
 		3BC8FB511F46D47300EF709C /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB3D1F46D47300EF709C /* UserInfo.m */; };
 		3BC8FB521F46D47300EF709C /* TBLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FB401F46D47300EF709C /* TBLogInViewController.m */; };
 		3BC8FB531F46D47300EF709C /* TBLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC8FB411F46D47300EF709C /* TBLogInViewController.xib */; };
@@ -384,6 +383,7 @@
 		3BC8FE261F46D72800EF709C /* ZXQRCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FD471F46D72800EF709C /* ZXQRCodeWriter.m */; };
 		3BC8FE271F46D72800EF709C /* ZXMultiFormatReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FD4A1F46D72800EF709C /* ZXMultiFormatReader.m */; };
 		3BC8FE281F46D72800EF709C /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FD4C1F46D72800EF709C /* ZXMultiFormatWriter.m */; };
+		3BEDC31C1F4A86D6009C1B7A /* TBNetworkPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDC31B1F4A86D6009C1B7A /* TBNetworkPromptView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -659,8 +659,6 @@
 		3BC8FB351F46D47300EF709C /* TBStartPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBStartPageView.m; sourceTree = "<group>"; };
 		3BC8FB361F46D47300EF709C /* TBTimeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTimeButton.h; sourceTree = "<group>"; };
 		3BC8FB371F46D47300EF709C /* TBTimeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTimeButton.m; sourceTree = "<group>"; };
-		3BC8FB391F46D47300EF709C /* TBStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBStrategyViewController.h; sourceTree = "<group>"; };
-		3BC8FB3A1F46D47300EF709C /* TBStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBStrategyViewController.m; sourceTree = "<group>"; };
 		3BC8FB3C1F46D47300EF709C /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		3BC8FB3D1F46D47300EF709C /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		3BC8FB3F1F46D47300EF709C /* TBLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLogInViewController.h; sourceTree = "<group>"; };
@@ -1134,6 +1132,8 @@
 		3BC8FD4A1F46D72800EF709C /* ZXMultiFormatReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatReader.m; sourceTree = "<group>"; };
 		3BC8FD4B1F46D72800EF709C /* ZXMultiFormatWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMultiFormatWriter.h; sourceTree = "<group>"; };
 		3BC8FD4C1F46D72800EF709C /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
+		3BEDC31A1F4A86D6009C1B7A /* TBNetworkPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNetworkPromptView.h; sourceTree = "<group>"; };
+		3BEDC31B1F4A86D6009C1B7A /* TBNetworkPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNetworkPromptView.m; sourceTree = "<group>"; };
 		97A564DF307BD3B88AD7D4F9 /* Pods-fireManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fireManagement/Pods-fireManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		D5FE6FA8C23F177244F8A104 /* Pods-fireManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-fireManagement/Pods-fireManagement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1797,7 +1797,8 @@
 				3BC8FB311F46D47300EF709C /* TBUpdateTooltipView.h */,
 				3BC8FB321F46D47300EF709C /* TBUpdateTooltipView.m */,
 				3BC8FB331F46D47300EF709C /* 启动页 */,
-				3BC8FB381F46D47300EF709C /* 攻略 */,
+				3BEDC31A1F4A86D6009C1B7A /* TBNetworkPromptView.h */,
+				3BEDC31B1F4A86D6009C1B7A /* TBNetworkPromptView.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -1811,15 +1812,6 @@
 				3BC8FB371F46D47300EF709C /* TBTimeButton.m */,
 			);
 			path = "启动页";
-			sourceTree = "<group>";
-		};
-		3BC8FB381F46D47300EF709C /* 攻略 */ = {
-			isa = PBXGroup;
-			children = (
-				3BC8FB391F46D47300EF709C /* TBStrategyViewController.h */,
-				3BC8FB3A1F46D47300EF709C /* TBStrategyViewController.m */,
-			);
-			path = "攻略";
 			sourceTree = "<group>";
 		};
 		3BC8FB3B1F46D47300EF709C /* user */ = {
@@ -2750,6 +2742,7 @@
 				3BC8FE091F46D72800EF709C /* ZXPDF417Common.m in Sources */,
 				3BC8FB191F46D27500EF709C /* ZZPhotoController.m in Sources */,
 				3BC8FB521F46D47300EF709C /* TBLogInViewController.m in Sources */,
+				3BEDC31C1F4A86D6009C1B7A /* TBNetworkPromptView.m in Sources */,
 				3BC8FDCC1F46D72800EF709C /* ZXRSSExpandedDecodedNumeric.m in Sources */,
 				3BC8FD8B1F46D72800EF709C /* ZXByteArray.m in Sources */,
 				3BC8FD751F46D72800EF709C /* ZXURIResultParser.m in Sources */,
@@ -3076,7 +3069,6 @@
 				3BC8FD671F46D72800EF709C /* ZXISBNParsedResult.m in Sources */,
 				3BC8FD911F46D72800EF709C /* ZXGridSampler.m in Sources */,
 				3BC8FDB31F46D72800EF709C /* ZXDataMatrixTextEncoder.m in Sources */,
-				3BC8FB501F46D47300EF709C /* TBStrategyViewController.m in Sources */,
 				3BC8FE061F46D72800EF709C /* ZXPDF417Dimensions.m in Sources */,
 				3BC8FB1A1F46D27500EF709C /* ZZPhotoListViewController.m in Sources */,
 				3BC8FE241F46D72800EF709C /* ZXQRCodeMultiReader.m in Sources */,

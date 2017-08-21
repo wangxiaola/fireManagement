@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "AFNetworking.h"
 #import "IQKeyboardManager.h"
 #import "MyUncaughtExceptionHandler.h"
 #import "TBUpdateTooltipView.h"
@@ -16,7 +15,7 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreLocation/CoreLocation.h>
-
+#import "TBNetworkPromptView.h"
 @interface AppDelegate ()<CLLocationManagerDelegate>
 @property(nonatomic) CLLocationManager *locationManager;
 @end
@@ -28,7 +27,8 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self initSDK];
-    [self checkVersion];
+//    [self checkVersion];
+    [self workReachability];
     ZKNavigationController *nav = [[ZKNavigationController alloc] initWithRootViewController:[[TBLogInViewController alloc] init]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
@@ -68,7 +68,50 @@
     //版本更新
     [self versionInformationQuery];
 }
-
+#pragma mark --- 监听网络状态---
+/**
+ 监听网络状态
+ */
+- (void)workReachability
+{
+    //创建网络监听管理者对象
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    //设置监听
+    TBWeakSelf
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
+     {
+         weakSelf.workStatus = status;
+         [weakSelf stateGrid:status];
+     }];
+    
+    //开始监听
+    [manager startMonitoring];
+    
+}
+- (void)stateGrid:(AFNetworkReachabilityStatus)workStatus
+{
+    if (workStatus == AFNetworkReachabilityStatusUnknown)
+    {
+//        hudShowError(@"网络连接异常!");
+        [TBNetworkPromptView showPrompt:@""];
+    }
+    else if (workStatus == AFNetworkReachabilityStatusNotReachable)
+    {
+        // 不可达的网络(未连接)
+//        hudShowError(@"网络异常!");
+        [TBNetworkPromptView showPrompt:@""];
+    }
+    else if (workStatus == AFNetworkReachabilityStatusReachableViaWWAN)
+    {
+        // 2G,3G,4G...的网络
+        [TBNetworkPromptView dismissNetworkPromptView];
+    }
+    else if (workStatus == AFNetworkReachabilityStatusReachableViaWiFi)
+    {
+        // wifi的网络
+        [TBNetworkPromptView dismissNetworkPromptView];
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -38,7 +38,7 @@
     attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
     [bar setTitleTextAttributes:attrs];
     [bar setTintColor:[UIColor whiteColor]];
-
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 #pragma mark  --UIViewController--
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated

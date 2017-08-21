@@ -36,32 +36,32 @@
     [super viewDidLoad];
     // 判断是否是第一次登陆
     
-//    hudConfig();
-//    /*
-//     获取APP版本号，将版本号作为Key（比如Bool类型），存储在NSuserDefault中，初此安装打开时，key是不存在的，即进入引导页面，之后将此key保存起来（保证前面的判断不会再进入）app升级后，判断新版本号的key，发现没有，即显示新版本的引导页面，然后将Key保存起来，以此类推。
-//     */
-//    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-//    
-//    NSString *xcodeAppVersion = [NSString stringWithFormat:@"%@%@",[infoDictionary valueForKey:@"CFBundleShortVersionString"],[infoDictionary valueForKey:@"CFBundleVersion"]];
-//    // 判断是否第一次进入或者是否刚升级完成
-//    BOOL isVersion = [ZKUtil obtainBoolForKey:xcodeAppVersion];
-//    
-//    if ([ZKUtil obtainBoolForKey:VALIDATION] && isVersion == YES)
-//    {
-//        UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
-//    }
-//    else
-//    {
-//        [self uiSetting];
-//        [ZKUtil saveBoolForKey:xcodeAppVersion valueBool:YES];
-//    }
-//    // 启动页加载
-//    if ([ZKUtil obtainBoolForKey:START_PAGE] == NO)
-//    {
-//        TBStartPageView *pageView = [[TBStartPageView alloc] init];
-//        [pageView show];
-//    }
+    hudConfig();
+    /*
+     获取APP版本号，将版本号作为Key（比如Bool类型），存储在NSuserDefault中，初此安装打开时，key是不存在的，即进入引导页面，之后将此key保存起来（保证前面的判断不会再进入）app升级后，判断新版本号的key，发现没有，即显示新版本的引导页面，然后将Key保存起来，以此类推。
+     */
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    
+    NSString *xcodeAppVersion = [NSString stringWithFormat:@"%@%@",[infoDictionary valueForKey:@"CFBundleShortVersionString"],[infoDictionary valueForKey:@"CFBundleVersion"]];
+    // 判断是否第一次进入或者是否刚升级完成
+    BOOL isVersion = [ZKUtil obtainBoolForKey:xcodeAppVersion];
+    
+    if ([ZKUtil obtainBoolForKey:VALIDATION] && isVersion == YES)
+    {
+        UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
+    }
+    else
+    {
+        [self uiSetting];
+        [ZKUtil saveBoolForKey:xcodeAppVersion valueBool:YES];
+    }
+    // 启动页加载
+    if ([ZKUtil obtainBoolForKey:START_PAGE] == NO)
+    {
+        TBStartPageView *pageView = [[TBStartPageView alloc] init];
+        [pageView show];
+    }
 }
 /**
  控件设置
@@ -71,27 +71,25 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.loginButton.layer.cornerRadius = 4;
-    
+    self.loginButton.layer.masksToBounds = YES;
     UIImageView *accountImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_icon_name"]];
     accountImage.frame = CGRectMake(0, 0, 30, 30);
     accountImage.contentMode = UIViewContentModeCenter;
     
     self.accountTextField.leftView = accountImage;
-    self.accountTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入账号"          attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:13 weight:0],}];
+    self.accountTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入账号"          attributes:@{NSForegroundColorAttributeName:NAVIGATION_COLOR  ,NSFontAttributeName : [UIFont systemFontOfSize:14 weight:0],}];
     self.accountTextField.returnKeyType = UIReturnKeyDone;
     self.accountTextField.leftViewMode = UITextFieldViewModeAlways;
     self.accountTextField.delegate = self;
     self.accountTextField.layer.cornerRadius = 6;
-    self.accountTextField.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.accountTextField.layer.borderWidth = 1;
     self.accountTextField.spacing = 30;
-    self.accountTextField.tintColor = [UIColor whiteColor];
+    self.accountTextField.tintColor = NAVIGATION_COLOR;
     
     UIImageView *passwordImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"register_icon_password"]];
     passwordImage.frame=CGRectMake(0, 0, 30, 30);
     passwordImage.contentMode = UIViewContentModeCenter;
     
-    self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码"          attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:13 weight:0],}];
+    self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码"          attributes:@{NSForegroundColorAttributeName: NAVIGATION_COLOR,NSFontAttributeName : [UIFont systemFontOfSize:14 weight:0],}];
     self.passwordTextField.leftView = passwordImage;
     self.passwordTextField.clearButtonMode = UITextFieldViewModeUnlessEditing;
     self.passwordTextField.secureTextEntry = YES;
@@ -99,10 +97,8 @@
     self.passwordTextField.leftViewMode = UITextFieldViewModeAlways;
     self.passwordTextField.delegate = self;
     self.passwordTextField.layer.cornerRadius = 6;
-    self.passwordTextField.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.passwordTextField.layer.borderWidth = 1;
     self.passwordTextField.spacing = 30;
-    self.passwordTextField.tintColor = [UIColor whiteColor];
+    self.passwordTextField.tintColor = NAVIGATION_COLOR;
     
     NSString *tel = [UserInfo account].phone;
     if (tel.length>0)
@@ -126,16 +122,17 @@
 
 - (IBAction)logInClick:(UIButton *)sender
 {
+    [self logSuccessfullyData:nil];
     [self.view endEditing:YES];
     
-    if (self.accountTextField.text.length>0&&self.passwordTextField.text.length>0)
-    {
-        [self postVerify];
-    }
-    else
-    {
-        hudShowError(@"账号或密码不能为空");
-    }
+//    if (self.accountTextField.text.length>0&&self.passwordTextField.text.length>0)
+//    {
+//        [self postVerify];
+//    }
+//    else
+//    {
+//        hudShowError(@"账号或密码不能为空");
+//    }
     
 }
 
@@ -200,10 +197,13 @@
 
 - (void)logSuccessfullyData:(NSDictionary*)data
 {
-    [ZKUtil saveBoolForKey:VALIDATION valueBool:YES];
-    UserInfo *info = [[UserInfo alloc] init];
-    info =  [UserInfo mj_objectWithKeyValues:data];
-    [UserInfo saveAccount:info];
+    if ([data isKindOfClass:[NSDictionary class]])
+    {
+        [ZKUtil saveBoolForKey:VALIDATION valueBool:YES];
+        UserInfo *info = [[UserInfo alloc] init];
+        info =  [UserInfo mj_objectWithKeyValues:data];
+        [UserInfo saveAccount:info];
+    }
     UIStoryboard *board =[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     [APPDELEGATE window].rootViewController = [board instantiateInitialViewController];
 }

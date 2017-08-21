@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworkReachabilityManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+@property (nonatomic) AFNetworkReachabilityStatus workStatus;//网络状态
 @end
 
