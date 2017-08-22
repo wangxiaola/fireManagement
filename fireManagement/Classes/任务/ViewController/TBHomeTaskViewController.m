@@ -11,6 +11,8 @@ static NSString *bannerName = @"collectMain_banner";
 
 #import "TBHomeTaskViewController.h"
 #import "TBHomeTaskCollectionViewCell.h"
+
+
 @interface TBHomeTaskViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 //底层背景图
 @property (nonatomic) CGSize cellSize;
@@ -19,8 +21,11 @@ static NSString *bannerName = @"collectMain_banner";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layOut;
 @property (nonatomic, strong) UIImageView *zoomImageView;
+@property (nonatomic, assign) CGFloat  collectionViewContentInset;
 //间隙
 @property (nonatomic, assign) CGFloat cellClearance;
+@property (nonatomic, strong) UIVisualEffectView *effectView;
+
 @end
 
 @implementation TBHomeTaskViewController
@@ -65,6 +70,7 @@ static NSString *bannerName = @"collectMain_banner";
 }
 - (void)initializeView
 {
+    
     CGFloat bannerWidth = 715;
     CGFloat bannerHeight = 394;
     CGFloat bannerImageHeight = _SCREEN_WIDTH*bannerHeight/bannerWidth;
@@ -72,7 +78,7 @@ static NSString *bannerName = @"collectMain_banner";
     
     CGFloat collectionViewHeight = _SCREEN_HEIGHT-64-bannerImageHeight-50;
     // collectionView 上间距
-    CGFloat  collectionViewContentInset = collectionViewHeight*0.2/2+10;
+    self.collectionViewContentInset = collectionViewHeight*0.2/2+10;
     CGFloat collectionViewCellHeight = collectionViewHeight*0.8;
     
     CGFloat cellWidth = (_SCREEN_WIDTH - self.cellClearance*3)/2;
@@ -90,20 +96,29 @@ static NSString *bannerName = @"collectMain_banner";
     //设置autoresizesSubviews让子类自动布局
     self.zoomImageView.autoresizesSubviews = YES;
     self.zoomImageView.clipsToBounds = YES;
-    self.zoomImageView.contentMode   = UIViewContentModeScaleAspectFit;
-    [self.view addSubview: self.zoomImageView];
+    self.zoomImageView.contentMode   = UIViewContentModeScaleAspectFill;
+    [self.collectionView addSubview:self.zoomImageView];
 
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    // 毛玻璃视图
+   self.effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    //添加到要有毛玻璃特效的控件中
+    self.effectView.frame = self.zoomImageView.bounds;
+    [self.collectionView addSubview:self.effectView];
+    //设置模糊透明度
+    self.effectView.alpha = 1.0f;
+    
+    
     MJWeakSelf
     //解决在nav 遮挡的时候 还会透明的显示问题;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.collectionView];
     self.collectionView.backgroundColor = RGB(244, 244, 244);
     //设置contentInset属性（上左下右 的值）
-    self.collectionView.contentInset = UIEdgeInsetsMake(collectionViewContentInset, 0, 0, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(self.collectionViewContentInset+self.imageHight, 0, 0, 0);
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.right.bottom.equalTo(weakSelf.view);
-        make.top.equalTo(weakSelf.zoomImageView.mas_bottom);
+        make.edges.equalTo(weakSelf.view);
     }];
     
     
@@ -120,13 +135,23 @@ static NSString *bannerName = @"collectMain_banner";
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat y = scrollView.contentOffset.y;
-    if(y< -self.imageHight)
+    CGFloat deltaY = fabs(y);
+    CGFloat imageOffset = self.imageHight + self.collectionViewContentInset;
+    CGFloat offsetHeight = _SCREEN_HEIGHT-64-50-imageOffset;
+    // 高斯模糊度
+    CGFloat imageAlpha = (deltaY-imageOffset)/offsetHeight*1.4;
+    
+    if(y < - imageOffset)
     {
         CGRect frame = self.zoomImageView.frame;
         frame.origin.y = y;
-        frame.size.height = -y;
+        frame.size.height = -y-self.collectionViewContentInset;
+        
         self.zoomImageView.frame = frame;
+        self.effectView.frame = frame;
+        self.effectView.alpha = imageAlpha;
     }
+
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -162,8 +187,8 @@ static NSString *bannerName = @"collectMain_banner";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-}
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

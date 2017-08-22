@@ -7,8 +7,12 @@
 //
 
 #import "TBHomeMyViewController.h"
+#import "TBVerifyViewController.h"
+#import "ZKNavigationController.h"
 #import "TBHeaderJellyView.h"
 #import "TBMyBannerView.h"
+#import "TBMoreReminderView.h"
+
 @interface TBHomeMyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) TBMyBannerView *bannerImageView;
 @property (strong, nonatomic) UITableView *tableView;
@@ -145,7 +149,19 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSInteger row = indexPath.row;
+    if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:0]])
+    {
+        [ZKUtil clearCache];
+    }
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:1]])
+    {
+        TBVerifyViewController *passViewC = [[TBVerifyViewController alloc] init];
+        [self.navigationController pushViewController:passViewC animated:YES];
+    }
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:1 inSection:1]])
+    {
+        [self logOutClick];
+    }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -159,6 +175,35 @@
         self.headerView.frame = CGRectMake(0,-offsetY, _SCREEN_WIDTH , self.imageHeight);
     }
 }
+#pragma mark --- 退出登录---
+- (void)logOutClick
+{
+    TBMoreReminderView *more = [[TBMoreReminderView alloc] initShowPrompt:@"亲，是否退出当前账号?"];
+    [more showHandler:^{
+        
+        [self dataCleaning];
+    }];
+    
+}
+// 数据清理
+- (void)dataCleaning
+{
+    [ZKUtil saveBoolForKey:VALIDATION valueBool:NO];
+    [ZKUtil saveBoolForKey:START_PAGE valueBool:NO];
+    [ZKUtil clearCache];
+    [self pushMainViewController];
+    
+}
+- (void)pushMainViewController
+{
+    hudDismiss();
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ZKNavigationController *nav = [[ZKNavigationController alloc] initWithRootViewController:[NSClassFromString(@"TBLogInViewController") new]];
+        [APPDELEGATE window].rootViewController = nav;
+    });
+}
+
+
 #pragma mark ---bannerPanAction---
 - (void)bannerPanAction:(UIPanGestureRecognizer *)pan
 {
@@ -170,13 +215,13 @@
 {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES animated:self.tabBarController.selectedIndex == 1];
+    [self.navigationController setNavigationBarHidden:YES animated:self.tabBarController.selectedIndex == 2];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self.headerView endAnimation];
-//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated;
@@ -184,7 +229,6 @@
     [super viewDidAppear:animated];
     [self.headerView endAnimation];
 }
-
 
 
 - (void)viewDidLoad {

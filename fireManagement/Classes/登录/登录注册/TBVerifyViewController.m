@@ -26,7 +26,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -63,7 +63,7 @@
     securityButton = [UIButton buttonWithType:UIButtonTypeCustom];
     securityButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [securityButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [securityButton setTitleColor:RGB(24, 196, 157) forState:UIControlStateNormal];
+    [securityButton setTitleColor:NAVIGATION_COLOR forState:UIControlStateNormal];
     [securityButton addTarget:self action:@selector(sendEvent:) forControlEvents:UIControlEventTouchUpInside];
     [phoneFieldView addSubview:securityButton];
     
