@@ -14,7 +14,6 @@
 }
 - (instancetype)initShowPrompt:(NSString *)prompt;
 {
-    
     self =[super initWithFrame:APPDELEGATE.window.bounds];
     if (self)
     {
